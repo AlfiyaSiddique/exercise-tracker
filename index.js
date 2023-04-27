@@ -63,8 +63,7 @@ passport.use(new localStrategy({
 }))
 
 passport.use(new GoogleStrategy({
-clientID:'568395425038-iic9l2bac797h1fv5h8odj6jmuqlmll0.apps.googleusercontent.com',
-clientSecret: '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',
+
 callbackURL: "http://localhost/googleAuth"
 },  async function(accessToken, refreshToken, profile, cb) {
   const user = {email: profile.emails[0].value, username: profile.name.givenName, googleId: profile.id}
@@ -81,8 +80,7 @@ callbackURL: "http://localhost/googleAuth"
 
 passport.use(new FacebookStrategy({
 clientID: '1269733813580115',
-clientSecret:'dd86e620a45ece3858c63760aa593c5f',
-callbackURL: "http://localhost/facebookAuth"
+
 }, function(accessToken, refreshToken, profile, cb) {
   const user = {username: profile.displayName, facebookId: profile.id}
 
