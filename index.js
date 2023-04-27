@@ -79,7 +79,7 @@ callbackURL: "http://localhost/googleAuth"
  ))
 
 passport.use(new FacebookStrategy({
-clientID: '1269733813580115',
+
 
 }, function(accessToken, refreshToken, profile, cb) {
   const user = {username: profile.displayName, facebookId: profile.id}
