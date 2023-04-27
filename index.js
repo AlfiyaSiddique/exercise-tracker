@@ -63,8 +63,9 @@ passport.use(new localStrategy({
 }))
 
 passport.use(new GoogleStrategy({
-
-callbackURL: "http://localhost/googleAuth"
+clientID: process.env.GOOGLE_CLIENT_ID,
+clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+callbackURL: process.env.GOOGLE_CALLBACK_URL
 },  async function(accessToken, refreshToken, profile, cb) {
   const user = {email: profile.emails[0].value, username: profile.name.givenName, googleId: profile.id}
    dbMethods.findAndUpdate(user)
@@ -79,8 +80,9 @@ callbackURL: "http://localhost/googleAuth"
  ))
 
 passport.use(new FacebookStrategy({
-
-
+clientID: process.env.FACEBOOK_CLIENT_ID,
+clientSecret:process.env.FACEBOOK_CLIENT_SECRET,
+callbackURL: process.env.FACEBOOK_CALLBACK_URL
 }, function(accessToken, refreshToken, profile, cb) {
   const user = {username: profile.displayName, facebookId: profile.id}
 
