@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@500&family=Roboto&display=swap&family=Edu+NSW+ACT+Foundation:wght@700');
+
+/* font-family: 'Noto Serif Georgian', serif; */
+/* font-family: 'Roboto', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    min-height: 100vh;
+    max-width: 1300px;
+    overflow-x: hidden;
+    margin: auto;
+}
+
+body {
+    position: relative;
+    max-width: 1300px;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+
+h1,h2,h3,h4{
+  font-family: 'Noto Serif Georgian', serif;
+}
+
+p, li, a{
+font-family: 'Roboto', sans-serif;
+}
+
+nav{
+   display: grid;
+   grid-template-columns: 20% 80%;
+   padding: 20px;
+   position: fixed;
+   top: 0;
+   width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+section{
+    padding: 40px;
+    text-align: center;
+}
+
+#home h1{
+    font-size: 3rem;
+
+}
+
+.homeContent h2{
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+nav a{color: black}
+
+a{
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+
+.flexitem h1{
+    height: 4rem;
+    color: #00676b;
+}
+
+.flexitem i{
+    margin: 1rem;
+    font-size: 2rem;
+    color: #00676b;
+}
+
+.flexitem p {
+    padding: 30px;
+}
+
+#logo a{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    color: #00676b;
+    font-size: 1.8rem;
+}
+
+.burgerStyle button{
+    display: block;
+    width: 50vw;
+}
+
+.burgerStyle *{
+    margin: 20px;
+}
+/* Classes */
+
+.layer{
+    width: 100%;
+    height: 100%;
+background: linear-gradient(160deg, rgba(9,121,106,1) 35%, rgba(0,2,3,1) 89%);
+position: absolute;
+top: 0;
+z-index: -1;
+opacity: .8;
+}
+
+.homeContent{
+    width: 40vw;
+    margin: auto;
+   padding-top: 12rem;
+}
+
+.sideContent{
+    width: 40%;
+    text-align: start;
+    margin: 7rem auto;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.error{
+    color: red;
+}
+
+.btn{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+    background-color: #00676b;
+    color: white;
+    cursor: pointer;
+}
+
+.btn a{
+    text-decoration: none;
+color: white;
+}
+
+.btnSmall{
+    padding: 10px 3rem;
+}
+
+.btnBig{
+    padding: 13px 2.5rem;
+    margin: 20px;
+    font-size: 1.3rem;
+}
+
+.secTitle{
+    font-size: 2.5rem;
+    margin: 3rem;
+    color: #00676b;
+}
+
+.secStart{
+    padding: 3rem;
+}
+
+.scrolled{
+    background-color: white;
+}
+
+.flexitem{
+    max-width: 30vw;
+}
+
+.footer{
+    color: white;
+    padding: 20px;
+    background-color: #00666a;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.sideImg{
+    width: 40%;
+}
+
+.linkActive{
+    border-bottom: 2px #00666a solid;
+ }
+
+ .burgerStyle{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    display: block;
+    background-color: whitesmoke;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+ }
+
+ .display{
+    display: none;
+ }
+
+ .fa-times{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+ }
+/* id*/
+
+#bg-img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+}
+
+#home{
+    height: 100vh;
+    padding: 0;
+   
+}
+
+#bg{
+    background-image: url('../images/Home\ Design.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#tipContainer .flex{
+    flex-wrap: wrap;
+}
+
+#burger{
+    display: none;
+}
+
+#cross i{
+    padding: 15px;
+    background-color: #00666a;
+    border-radius: 5px;
+    color: white;
+}
+
+.btn:hover{
+    background-color: #22a3a8;
+}
+
+

@@ -1,0 +1,81 @@
+#tipContainer{
+    margin-top: 4rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.2rem;
+    margin: 3rem auto;
+}
+
+.tipBox{
+    padding: 20px;
+    margin: 10px;
+    box-shadow: rgb(0 103 107 / 43%) 0px 5px 15px;
+     border-radius: 20px;
+}
+
+.tipBox h2 , h3{
+    margin: 20px;
+    color: #00676b;
+}
+
+.tipBox p{line-height: 1.5;}
+
+.foodTipBox{
+    width: 40vw;
+    margin: auto;
+}
+
+
+#tipContainer form *{
+    display: inline-block;
+    border-radius: 5px;
+    border: 2px solid #00676b;
+}
+
+#tipContainer form input{
+    width: 60%;
+}
+
+#tipContainer form select{
+    width: 20%;
+}
+
+#tippage nav, #entry nav{
+    background-color: white;
+}
+
+.tipKey{
+    font-weight: bolder;
+    color: #00676b;
+}
+
+/* Medium */
+@media (min-width: 600px) and (max-width: 800px) {
+   #tipContainer .grid{
+    grid-template-columns: repeat(2, 1fr);
+   }
+
+  
+ }
+ 
+ @media  (max-width: 599px) {
+    #tipContainer .grid{
+    grid-template-columns: 1fr;
+    }  
+
+    #tipContainer form *{
+        display: block;
+       }
+   
+       #tipContainer form select{
+          width: 90%;
+       }
+
+       #tipContainer form input{
+        width: 90%;
+     }
+  }
+

@@ -1,0 +1,45 @@
+<div id="entry">
+
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navbar.ejs') %>
+
+<section>
+  <div class="container">
+    <% if(errors != " "){ %>
+      <% errors.forEach(err=>{ %>
+           <div class="error"><%- err %></div>
+      <% })}  %>
+   
+       <% 
+       (formName === "Login")? post = 'login' : post = "signup";
+       %>
+     <h1><%=formName %></h1>
+     <form action="/<%= post%>" method="post">
+       <input type="email", placeholder="Email", name="email">
+       <% if(formName !== 'Login') {%>
+         <input type="text" placeholder="Username" name="username">
+         <% } %>
+       <input type="password" placeholder="Password" name="password">
+       <% if(formName !== 'Login') {%>
+           <input type="password" placeholder="Confirm Password" name="cpassword">
+           <% } %>
+       <button type="submit"><%= formName %></button>
+     </form>
+     <button >
+       <a href="/getGoogleAuth" role="button">
+         <i class="fab fa-google"></i>
+         Sign in with Google
+       </a>
+     </button>
+     <button>
+       <a href="/getFacebookAuth" role="button">
+         <i class="fab fa-facebook"></i>
+         Sign in with Facebook
+       </a>
+     </button>
+  </div>
+  
+</div>
+</div>
+</body>
+</html>

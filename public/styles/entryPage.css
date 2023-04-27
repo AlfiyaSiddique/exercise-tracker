@@ -1,0 +1,59 @@
+#entry h1{
+    color: #00676b;
+    font-size: 2rem;
+}
+
+.container{
+    width: 40vw;
+    margin: 5rem auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 40px;
+}
+
+form *, .container button{
+    display: block;
+    width: 80%;
+    padding: 10px 20px;
+    margin: 20px auto;
+    border: 2px solid #00676b;
+    font-size: 1rem;
+}
+
+.container button{
+    border-radius: 10px;
+    background-color: #00676b;
+    color: whitesmoke;
+    font-weight: bolder;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container button a{
+    color: whitesmoke;
+}
+form *::placeholder{
+    color: #00676b;
+}
+
+.exerciseForm{
+    text-align: center;
+    width: 40vw;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+}
+
+
+@media(min-width: 600px) and (max-width: 900px){
+  .container{width: 60vw;}
+}
+
+@media(max-width: 600px){
+    .container{width: 85vw; padding: 20px;}
+}
+
+@media (max-width: 450px){
+    #entry section{
+        padding: 20px;
+    }
+}

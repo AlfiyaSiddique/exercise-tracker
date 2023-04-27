@@ -1,0 +1,49 @@
+<div id="tippage">
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navbar.ejs') %>
+
+<section  id="tipContainer">
+    <form action="/tips" method="post">
+        <input type="text" placeholder="Search for a specific body-part Exercise or Food Item to know health related properties about the food." name="keyword">
+        <select name="type" >
+            <option value="Exercise">Exercise</option>
+            <option value="Food">Food</option>
+        </select>
+</form>
+<div class="grid">
+   <% if(type == 'Exercise'){ %>
+    <% exercise.forEach(element => { %>
+        <div class="tipBox">
+           <h2><%= element.name %></h2> 
+           <p><%= element.instructions %></p> 
+           <h3>For: <span class="tipKey"/>  <%= element.muscle %> </h3> 
+           <h3>Level: <%= element.difficulty%></h3> 
+        </div>
+    <% }); %>
+    
+    <% } %>
+</div>
+
+    <% if(type !== 'Exercise') {%>
+        <div class="foodTipBox tipBox">
+            <p> <span class="tipKey"/> Food Name:</span> <%= exercise.name %></p> 
+            <p> <span class="tipKey"/> Calories: </span><%= exercise.calories %></p> 
+            <p> <span class="tipKey"/> Serving size:</span> <%= exercise.serving_size_g%> grams</p> 
+            <p> <span class="tipKey"/> Fat:</span> <%= exercise.fat_total_g%> grams</p> 
+            <p> <span class="tipKey"/> Saturated Fat:</span> <%= exercise.fat_saturated_g%> grams</p> 
+            <p> <span class="tipKey"/> Protein:</span> <%= exercise.protein_g%> grams</p> 
+            <p> <span class="tipKey"/> Sodium:</span> <%= exercise.sodium_mg%> milligram</p> 
+            <p> <span class="tipKey"/> Potassium:</span> <%= exercise.potassium_mg%> milligram</p> 
+            <p> <span class="tipKey"/> Cholesterol:</span> <%= exercise.cholesterol_mg%> milligram</p> 
+            <p> <span class="tipKey"/> Carbohydrates:</span> <%= exercise.carbohydrates_total_g%> gram</p> 
+            <p> <span class="tipKey"/> Fiber: </span><%= exercise.fiber_g%> gram</p> 
+            <p> <span class="tipKey"/> Sugar:</span> <%= exercise.sugar_g%> gram</p> 
+         </div>
+        <% } %>
+
+</section>
+<section>
+    <%- include('./partials/footer.ejs') %>
+
+</section>
+</div>

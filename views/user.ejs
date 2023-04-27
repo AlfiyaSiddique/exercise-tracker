@@ -1,0 +1,54 @@
+<%- include('./partials/header.ejs') %>
+    <nav class="flex" id="usernav">
+        <h2>FitTrack</h2>
+        <h3>
+            <%= username %>
+        </h3>
+        <button class="btn btnSmall" id="addexer"> Add Exercises</button>
+        <button class="btn btnSmall"> <a href="/logout"> log out</button></a>
+    </nav>
+
+    <section id="user">
+        <div id="flexbox">
+            <% if(exercises.length === 0){%>
+         <h1 style="color:grey; font-size: 2rem;">Add Exercise To see here</h1>
+           <% } %>
+            <% exercises.forEach(exercise=> { %>
+                <div class="eBox">
+                    <% const dateObject=new Date(exercise.date); %>
+                        <% const currentDate=new Date(); %>
+                        <% const userdata = exercise; %>
+                                <% if (dateObject.getTime()< currentDate.getTime()) { %>
+                                    <p style="color: red;">Not Completed</p>
+                                    <% } %>
+                                        <p>Exercise name: <%= exercise.exerciseName %>
+                                        </p>
+                                        <p>Description : <%= exercise.description %>
+                                        </p>
+                                        <p>Duration : <%= exercise.duration %>
+                                        </p>
+                                        <p>Date : <%= exercise.date %>
+                                        </p>
+                                        <i class="fa fa-check-circle" onclick="deleteExercise('<%= JSON.stringify(userdata) %>')"></i>
+                                        <i class="fa fa-trash"
+                                        onclick="deleteExercise('<%= JSON.stringify(userdata) %>')"></i>
+                </div>
+                <% }); %>
+        </div>
+    </section>
+
+    <section id="addform" class="hidden">
+        <div class="black"></div>
+        <form action="/exercise" method="post" class="shadow">
+            <input type="text" , placeholder="Exercise Name" , name="exerciseName">
+            <input type="text" , placeholder="Exercise Description" , name="description">
+            <input type="text" , placeholder="Exercise Duration" , name="duration">
+            <input type="text" , placeholder="Date" , name="date">
+            <button type="submit" class="btn btn-Small" onclick="closeAddExercise()">Add</button>
+            <button type="button" class="btn btn-Small" onclick="closeAddExercise()">Cancel</button>
+        </form>
+    </section>
+
+    <section>
+        <%- include('./partials/footer.ejs') %>
+    </section>

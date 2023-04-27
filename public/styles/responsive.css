@@ -1,0 +1,85 @@
+/* Large */
+@media (min-width: 1300px) {
+    nav{
+        width: 80rem;
+    }
+}
+
+/* Medium */
+@media (min-width: 600px) and (max-width: 750px) {
+   .btnSmall{
+    padding: 10px 1rem;
+   }
+
+   #logo a{
+    font-size: 1.5rem;
+   }
+
+   #useSteps .secStart{
+    padding: 3rem 20px;
+   }
+}
+
+@media  (max-width: 599px) {
+    
+    #mainBar ul{
+        display: none;
+    }
+    nav{
+        grid-template-columns: 50% 50%;
+    }
+
+    #burger{
+        display: block;
+        font-size: 1.3rem;
+        color: #00676b;
+        justify-self: flex-end;
+        align-self: center;
+        margin-right: 3rem;
+    }
+
+    .phoneNav{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .homeContent{
+        width: 80vw;
+    }
+
+    .secStart, #useSteps{
+        padding: 3rem 30px;
+    }
+
+    #useSteps .flexitem{
+        max-width: 80vw;
+    }
+
+    #useSteps .flexitem h1{
+        height: auto;
+    }
+ }
+
+ /* Different size line  */
+
+ @media (min-width: 600px) and (max-width: 900px){
+
+    #useSteps .flexitem{
+        max-width: 40vw;
+    }
+
+   
+ } 
+
+ @media (max-width: 400px){
+    .secTitle{
+        margin: 3rem 20px;
+    }
+ }
+
+
+
+
+
+
+

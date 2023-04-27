@@ -1,0 +1,91 @@
+#addform{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#addform form{
+        width: 70vw;
+        margin: auto;
+        padding: 3rem;
+        margin-top: 2rem;
+        background-color: whitesmoke;
+        border-radius: 20px;
+        position: relative;
+}
+
+#addform input{
+    width: 50%;
+}
+
+#addform button{
+    width: 50%;
+    cursor: pointer;
+}
+
+#addform .black{
+    position: absolute;
+    top: 0;
+    background-color: black;
+    opacity: .5;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.hidden{
+    display: none;
+}
+
+#user{
+    min-height: 86vh;
+}
+
+.flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.eBox{
+    padding: 1.5rem;
+    margin: .5rem;
+    color: whitesmoke;
+    width: 275px;
+    background-color: #00676b;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: relative;
+}
+
+.fa-trash{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.fa-check-circle{
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+
+
+.eBox p{
+    margin: 20px;
+}
+
+#usernav{
+    position: relative;
+}
+
+#flexbox{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
