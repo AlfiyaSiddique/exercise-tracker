@@ -25,7 +25,7 @@ const getTipsPage = (req,res)=>{
         muscle: muscle
     },
     headers: {
-        'X-Api-Key': '4E4S1AUo0WiAeWaoQFO4zg==sNdbLu6FzvYM23RG'
+        'X-Api-Key': process.env.TIPSAPIKEY
     }
   })
   .then((response)=>{
