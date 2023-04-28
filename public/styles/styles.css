@@ -186,6 +186,14 @@ color: white;
     width: 100vw;
 }
 
+.footer a{
+    color: whitesmoke;
+}
+
+.icons{
+    margin-right: 50px;
+}
+
 .sideImg{
     width: 40%;
 }
