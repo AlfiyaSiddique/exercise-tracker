@@ -1,6 +1,6 @@
 <%- include('./partials/header.ejs') %>
     <nav class="flex" id="usernav">
-        <h2>FitTrack</h2>
+        <h2 id="logo"> <a href="/"><i class="fa fa-heartbeat"></i> FitTrack</a></h2>
         <h3>
             <%= username %>
         </h3>
@@ -40,10 +40,10 @@
     <section id="addform" class="hidden">
         <div class="black"></div>
         <form action="/exercise" method="post" class="shadow">
-            <input type="text" , placeholder="Exercise Name" , name="exerciseName">
-            <input type="text" , placeholder="Exercise Description" , name="description">
-            <input type="text" , placeholder="Exercise Duration" , name="duration">
-            <input type="text" , placeholder="Date" , name="date">
+            <input type="text" , placeholder="Exercise Name" , name="exerciseName"  required>
+            <input type="text" , placeholder="Exercise Description" , name="description" required>
+            <input type="text" , placeholder="Exercise Duration" , name="duration" required>
+            <input type="text" , placeholder="Date: yy-mm-dd" , name="date" required>
             <button type="submit" class="btn btn-Small" onclick="closeAddExercise()">Add</button>
             <button type="button" class="btn btn-Small" onclick="closeAddExercise()">Cancel</button>
         </form>

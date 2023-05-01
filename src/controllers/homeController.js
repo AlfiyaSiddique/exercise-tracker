@@ -1,5 +1,4 @@
 import axios from "axios"
-import { response } from "express"
 
 const getHomePage = (req,res)=>{
     if(req.isAuthenticated()){
@@ -8,10 +7,6 @@ const getHomePage = (req,res)=>{
         res.render("home")
     }
 }
-// url: 'https://api.api-ninjas.com/v1/exercises?',
-// headers: {
-//   'X-Api-Key': '4E4S1AUo0WiAeWaoQFO4zg==sNdbLu6FzvYM23RG'
-// },
 
 const getAboutPage = (req, res)=>{
  res.render("about")
@@ -38,7 +33,7 @@ const getTipsPage = (req,res)=>{
 }
 
 const getLoginPage = (req, res)=>{
-    res.render("entry", {formName: "Login", errors: 0});
+    res.render("entry", {formName: "Login", errors: req.flash("errors")});
 }
 
 const getSignUpPage = (req, res)=>{

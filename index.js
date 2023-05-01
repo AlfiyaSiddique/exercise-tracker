@@ -14,7 +14,6 @@ import facebookAuth from "passport-facebook";
 import dotenv from "dotenv/config.js"
 import dbMethods from "./src/models/databaseMethods.js";
 import entryController from "./src/controllers/entryController.js";
-// dotenv.config()
 
 const GoogleStrategy = googleAuth.Strategy;
 const FacebookStrategy = facebookAuth.Strategy;

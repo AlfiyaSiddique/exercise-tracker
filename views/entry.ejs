@@ -15,13 +15,13 @@
        %>
      <h1><%=formName %></h1>
      <form action="/<%= post%>" method="post">
-       <input type="email", placeholder="Email", name="email">
+       <input type="email", placeholder="Email", name="email" required>
        <% if(formName !== 'Login') {%>
-         <input type="text" placeholder="Username" name="username">
+         <input type="text" placeholder="Username" name="username" required>
          <% } %>
-       <input type="password" placeholder="Password" name="password">
+       <input type="password" placeholder="Password" name="password" required>
        <% if(formName !== 'Login') {%>
-           <input type="password" placeholder="Confirm Password" name="cpassword">
+           <input type="password" placeholder="Confirm Password" name="cpassword" required>
            <% } %>
        <button type="submit"><%= formName %></button>
      </form>
